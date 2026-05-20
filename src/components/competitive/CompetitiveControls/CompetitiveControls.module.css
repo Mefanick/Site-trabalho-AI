@@ -1,0 +1,36 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+  width: 100%;
+  max-width: min(560px, 90vw);
+}
+
+.btn {
+  flex: 1 1 30%;
+  min-width: 0;
+  font-size: var(--font-size-small);
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+}
+
+@media (max-width: 900px) {
+  .row {
+    width: 95%;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .btn:last-child {
+    grid-column: 1 / -1;
+  }
+}

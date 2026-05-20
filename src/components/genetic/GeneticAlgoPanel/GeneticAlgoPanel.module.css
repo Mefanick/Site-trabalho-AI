@@ -1,0 +1,27 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: var(--stroke-width) solid var(--color-black);
+  padding: 0.5rem 0.65rem 0.65rem;
+  flex: 1;
+  min-height: 220px;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.5rem;
+}
+
+.title,
+.speedLabel {
+  font-weight: 700;
+  text-transform: lowercase;
+  font-size: var(--font-size-medium);
+}
+
+.speedLabel {
+  margin-left: 0.25rem;
+}

@@ -1,0 +1,14 @@
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-yellow: #ffeb3b;
+  --color-header-gray: #e0e0e0;
+  --stroke-width: 3px;
+  --border-radius: 12px;
+  --font-ui: "Cascadia Mono", "Consolas", "Courier New", monospace;
+  --font-doc: Arial, Helvetica, sans-serif;
+  --font-size-large: 28px;
+  --font-size-page-title: 22px;
+  --font-size-medium: 16px;
+  --font-size-small: 11px;
+}

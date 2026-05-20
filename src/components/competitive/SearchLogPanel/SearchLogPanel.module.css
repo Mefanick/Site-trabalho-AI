@@ -1,0 +1,15 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: calc(100vh - 88px);
+}
+
+.log {
+  flex: 1;
+}
+
+.panel pre {
+  flex: 1;
+  min-height: 300px;
+}

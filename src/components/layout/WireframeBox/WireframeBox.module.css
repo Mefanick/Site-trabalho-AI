@@ -1,0 +1,5 @@
+.box {
+  border: var(--stroke-width) solid var(--color-black);
+  background: var(--color-white);
+  box-sizing: border-box;
+}

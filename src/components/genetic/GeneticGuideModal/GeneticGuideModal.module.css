@@ -1,0 +1,9 @@
+.text {
+  margin: 0;
+  font-family: var(--font-doc);
+  font-size: 14px;
+  white-space: pre-wrap;
+  line-height: 1.5;
+  max-height: 60vh;
+  overflow-y: auto;
+}

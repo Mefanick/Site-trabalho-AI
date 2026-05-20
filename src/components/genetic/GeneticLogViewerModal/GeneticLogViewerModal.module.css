@@ -1,0 +1,30 @@
+.log {
+  margin: 0 0 1rem;
+  font-family: var(--font-ui);
+  font-size: var(--font-size-small);
+  white-space: pre-wrap;
+  border: 2px solid var(--color-black);
+  padding: 0.75rem;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.meta {
+  font-size: var(--font-size-small);
+  margin-bottom: 0.5rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.counter {
+  font-size: var(--font-size-small);
+}
+
+.empty {
+  font-family: var(--font-doc);
+}
