@@ -20,6 +20,8 @@
 .cell {
   border: 1px solid var(--color-black);
   background: var(--color-white);
+  color: var(--color-black);
+  -webkit-text-fill-color: var(--color-black);
   font-size: 14px;
   font-family: var(--font-ui);
   font-weight: 700;
@@ -32,6 +34,12 @@
   min-height: 0;
 }
 
+.cell:disabled {
+  color: var(--color-black);
+  -webkit-text-fill-color: var(--color-black);
+  opacity: 1;
+}
+
 .cell.hoverable:not(:disabled):hover {
   background: var(--color-yellow);
   cursor: pointer;
@@ -39,9 +47,11 @@
 
 .cell.lastAi {
   background: var(--color-yellow);
+  color: var(--color-black);
+  -webkit-text-fill-color: var(--color-black);
 }
 
-.cell:disabled:not(.lastAi) {
+.occupied:disabled {
   cursor: default;
 }
 

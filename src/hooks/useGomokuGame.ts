@@ -24,7 +24,7 @@ export function useGomokuGame() {
   const workerRef = useRef<Worker | null>(null);
   const simTimerRef = useRef<number | null>(null);
   const turnRef = useRef(0);
-  const simModeRef = useRef<'none' | 'ai_vs_ai' | 'smart_vs_normal'>('none');
+  const simModeRef = useRef<'none' | 'ai_vs_ai'>('none');
   const nextPlayerRef = useRef(AI);
 
   const [board, setBoard] = useState<CellSymbol[][]>(() => gameRef.current.displayBoard());
@@ -140,15 +140,7 @@ export function useGomokuGame() {
 
     if (simModeRef.current === 'ai_vs_ai') {
       const player = nextPlayerRef.current;
-      const smart = true;
-      runAiTurn(smart, player, () => {
-        nextPlayerRef.current = player === AI ? HUMAN : AI;
-        simTimerRef.current = window.setTimeout(scheduleSimStep, SIM_DELAY_MS);
-      });
-    } else if (simModeRef.current === 'smart_vs_normal') {
-      const player = nextPlayerRef.current;
-      const smart = player === AI;
-      runAiTurn(smart, player, () => {
+      runAiTurn(true, player, () => {
         nextPlayerRef.current = player === AI ? HUMAN : AI;
         simTimerRef.current = window.setTimeout(scheduleSimStep, SIM_DELAY_MS);
       });
@@ -208,15 +200,6 @@ export function useGomokuGame() {
     simTimerRef.current = window.setTimeout(scheduleSimStep, SIM_DELAY_MS);
   }, [resetGame, scheduleSimStep]);
 
-  const simulateSmartVsNormal = useCallback(() => {
-    resetGame();
-    simModeRef.current = 'smart_vs_normal';
-    nextPlayerRef.current = AI;
-    setSimulating(true);
-    setHumanTurn(false);
-    simTimerRef.current = window.setTimeout(scheduleSimStep, SIM_DELAY_MS);
-  }, [resetGame, scheduleSimStep]);
-
   useEffect(() => {
     return () => {
       stopSimulation();
@@ -235,7 +218,6 @@ export function useGomokuGame() {
     logStatus,
     logText,
     simulateAiVsAi,
-    simulateSmartVsNormal,
     simulating,
   };
 }

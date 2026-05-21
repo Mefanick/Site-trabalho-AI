@@ -26,11 +26,11 @@
 
 @media (max-width: 520px) {
   .row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    flex-direction: column;
   }
 
-  .btn:last-child {
-    grid-column: 1 / -1;
+  .btn {
+    flex: none;
+    width: 100%;
   }
 }

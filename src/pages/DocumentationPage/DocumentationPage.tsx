@@ -31,8 +31,7 @@ export function DocumentationPage() {
               podas alfa-beta e jogada escolhida (texto resumido).
             </li>
             <li>
-              <strong>Botões:</strong> simular IA vs IA; simular IA inteligente vs IA normal;
-              resetar jogo (limpa tabuleiro e LOG inicial).
+              <strong>Botões:</strong> simular IA vs IA; resetar jogo (limpa tabuleiro e LOG inicial).
             </li>
             <li>Última jogada da IA destacada a amarelo no tabuleiro.</li>
           </ul>

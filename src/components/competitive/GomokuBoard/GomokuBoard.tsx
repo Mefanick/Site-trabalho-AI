@@ -27,6 +27,7 @@ export function GomokuBoard({
             const canPlay = inputEnabled && empty && !gameOver;
             const classes = [
               styles.cell,
+              !empty ? styles.occupied : '',
               empty && canPlay ? styles.hoverable : '',
               isLastAi ? styles.lastAi : '',
             ]

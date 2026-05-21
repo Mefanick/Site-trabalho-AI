@@ -22,7 +22,6 @@ export function CompetitivePage() {
           />
           <CompetitiveControls
             onSimulateAiVsAi={game.simulateAiVsAi}
-            onSimulateSmartVsNormal={game.simulateSmartVsNormal}
             onReset={game.resetGame}
           />
         </div>
